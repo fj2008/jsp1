@@ -15,7 +15,6 @@
 		<p>아이디 : <input type="text" name="id"><input type ="button" value="아이디 중복 검사"></p><!-- 인풋태그로 인해서 데이터를 적을수있다 -->
 		<p>비밀번호 :<input type="password" name="passwd"></p>
 		<p>비밀번호 확인 : <input type="password" name-="passwd2"></p>
-		<p><input type ="submit" value="전송"></p>
 		<p>이름 :<input type = "text" name="name"></p>
 		<p>연락처 :<input type="number" name="phone1">-
 		<input type="number" name="phone1">-
