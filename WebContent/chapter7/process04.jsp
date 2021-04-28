@@ -17,7 +17,7 @@
 	
 	while(params.hasNext()){
 		FileItem item = (FileItem) params.next();
-		if(item.isFormField()){
+		if(item.isFormField()){//Item객체에 저장되어있는 파일데이터가 파일데이터라면 ture,그외데이터면 false
 			String name = item.getFieldName();//요청파라미터의 이름을 알려주는 메서드
 			String value = item.getString("UTF-8");//요청 파라미터를 문자열로 가저옴 
 			out.println("<p>" + name + " = " + value + "</p>");
