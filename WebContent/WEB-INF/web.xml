@@ -9,6 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <filter>
+  	<filter-name>Filter01</filter-name>
+  	<filter-class>/chapter10.AuthenFilter</filter-class>
+  </filter>
+  
+	<filter-mapping>
+		<filter-name>Filter01</filter-name>
+		<url-pattern>/chapter12/filter01_process.jsp</url-pattern>
+	</filter-mapping>  
+  
   <security-role>
   	<role-name>role1</role-name><!-- role1에관련된 설정 역할을 불러옴 -->
   </security-role>
