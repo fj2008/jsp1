@@ -1,47 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>JSPBook</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  <filter>
-  	<filter-name>Filter01</filter-name>
-  	<filter-class>/chapter10.AuthenFilter</filter-class>
-  </filter>
-  
-	<filter-mapping>
-		<filter-name>Filter01</filter-name>
-		<url-pattern>/chapter12/filter01_process.jsp</url-pattern>
-	</filter-mapping>  
-  
-  <security-role>
-  	<role-name>role1</role-name><!-- role1에관련된 설정 역할을 불러옴 -->
-  </security-role>
-  
-  <security-constraint>
-  	<web-resource-collection>
-  		<web-resource-name>JSPBook</web-resource-name>
-  		<url-pattern>/chapter9/security02.jsp</url-pattern><!-- 이 경로에있는 모든 자원에 제약사항을 걸겠다 -->
-  		<http-method>GET</http-method>
-  	</web-resource-collection>
-  	
-  	<auth-constraint>
-  		<description>관리자 권한</description><!-- 누가 권한을 받을것인지/manager라는 이름을가진 사용자만 사용할수 있는 권한을 주겠다 -->
-  		<role-name>role1</role-name><!-- 이사용자만 접근할 수 있다 -->
-  	</auth-constraint>
-  </security-constraint>
-  
-  <login-config>
-  	<auth-method>FORM</auth-method><!-- form기반에 사용자가 인증 -->
-  	<form-login-config>
-  		<form-login-page>/chapter9/login01.jsp</form-login-page><!--로그인성공시 -->
-  		<form-error-page>/chapter9/error01.jsp</form-error-page><!-- 로그인 실패시 -->
-  	</form-login-config>
-  </login-config>
-  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>JSPBook</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+<!-- <security-role> -->
+	<!-- <role-name>role1</role-name>role1에관련된 설정 역할을 불러옴 -->
+	<!-- </security-role> -->
+
+	<!-- <security-constraint> -->
+	<!-- <web-resource-collection> -->
+	<!-- <web-resource-name>JSPBook</web-resource-name> -->
+	<!-- <url-pattern>/chapter9/security02.jsp</url-pattern>이 경로에있는 모든 자원에 제약사항을 
+		걸겠다 -->
+	<!-- <http-method>GET</http-method> -->
+	<!-- </web-resource-collection> -->
+
+	<!-- <auth-constraint> -->
+	<!-- <description>관리자 권한</description>누가 권한을 받을것인지/manager라는 이름을가진 사용자만 
+		사용할수 있는 권한을 주겠다 -->
+	<!-- <role-name>role1</role-name>이사용자만 접근할 수 있다 -->
+	<!-- </auth-constraint> -->
+	<!-- </security-constraint> -->
+
+	<!-- <login-config> -->
+	<!-- <auth-method>FORM</auth-method>form기반에 사용자가 인증 -->
+	<!-- <form-login-config> -->
+	<!-- <form-login-page>/chapter9/login01.jsp</form-login-page>로그인성공시 -->
+	<!-- <form-error-page>/chapter9/error01.jsp</form-error-page>로그인 실패시 -->
+	<!-- </form-login-config> -->
+	<!-- </login-config> -->
+
+	
+
 </web-app>
